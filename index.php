@@ -6,6 +6,7 @@ $user = new controlFront();
 $admin = new controlBack();
 
 if (isset($_GET['action'])) {
+    /// user ///
     switch ($_GET['action']) {
         case 'listPosts':
             if(isset($_GET['page'])){
