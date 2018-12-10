@@ -1,10 +1,6 @@
-<?php
-
+<?php ob_start();
 require_once('model/frontend/modelFront.php');
 require_once('model/backend/modelBack.php');
-
-
-
 
 class controlBack extends modelBack 
 {
@@ -19,6 +15,14 @@ class controlBack extends modelBack
         $posts = $user->getPosts($currentPage);
         $nbOfPosts = $user->numberOfPosts();
         require('view/frontend/listPostView.php');
+    }
+
+    public function post($id)
+    {
+        $user = new modelFront();
+        $post = $user->getPost($id);
+        $comments = $user->getComments($id);
+        require('view/frontend/postView.php');
     }
 
     public function connect($pseudo, $password)
@@ -38,10 +42,10 @@ class controlBack extends modelBack
 
     public function connected ()
     {
-        session_start();
         $idAdmin = $this->hashPassword();
+        session_start();
         $isPasswordCorrect = password_verify($_SESSION['password'], $idAdmin['password']);
-        if ($isPasswordCorrect) {        
+        if ($isPasswordCorrect) { 
         }
         else {
             throw new Exception("Erreur : Vous n'avez pas le droit d'être ici");
@@ -91,19 +95,17 @@ class controlBack extends modelBack
     public function deleteComments($id, $postId)
     {
         $this->deleteComment($id);
-        header('Location: index.php?action=post&id=' . $postId);
+        $this->post($postId);
     }
     public function addAnswer($id, $answer, $postId)
     {
         $this->saveAnswer($id, $answer);
-        header('Location: index.php?action=post&id=' . $postId);
+        $this->post($postId);
     }
     public function addAnswerModerate($id, $answer)
     {
         $this->saveAnswer($id, $answer);
-        header('Location: index.php?action=moderateComments');
+        $this->moderate();
     }
 
-}
-
-?>
+} ?>
