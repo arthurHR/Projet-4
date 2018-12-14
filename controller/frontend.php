@@ -8,7 +8,7 @@ class controlFront extends modelFront
 	{
 		$idMax = $this->selectIdMax();
 		$post = $this->getPost($idMax);
-		require('view/frontend/homePage.php');
+		require('view/frontend/homeView.php');
 	}
 
 	public function listPosts($currentPage)
@@ -62,7 +62,7 @@ class controlFront extends modelFront
 	        die('Impossible d\'ajouter le commentaire !');
 	    }
 	    else {
-	        header('Location: index.php?action=post&id=' . $postId);
+	       $this->post($postId);
 	    }
 	}
 
