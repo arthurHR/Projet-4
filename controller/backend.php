@@ -29,26 +29,25 @@ class controlBack extends modelBack
     {	
         $idAdmin = $this->hashPassword();
         $isPasswordCorrect = password_verify($password, $idAdmin['password']);
-        if ($isPasswordCorrect)
+        if ($isPasswordCorrect && $idAdmin['pseudo'] == $pseudo)
         {
-        	session_start();
         	$_SESSION['pseudo'] = $pseudo;
             $_SESSION['password'] = $password;
         	$this->listPosts(1);
         } else {
-        	require('view/backend/login.php');    
+        	require('view/backend/loginView.php');    
         }
     }
 
     public function connected ()
     {
         $idAdmin = $this->hashPassword();
-        session_start();
         $isPasswordCorrect = password_verify($_SESSION['password'], $idAdmin['password']);
         if ($isPasswordCorrect) { 
         }
         else {
-            throw new Exception("Erreur : Vous n'avez pas le droit d'être ici");
+            header('Location: http://s736369307.onlinehome.fr/Projet_4/index.php?action=login');
+            exit;   
         }
     }
 
@@ -68,7 +67,7 @@ class controlBack extends modelBack
     {
         $user = new modelFront();
         $post = $user->getPost($id);
-        require('view/backend/updatePost.php');
+        require('view/backend/updatePostView.php');
     }
 
     public function saveUpdate($id, $title, $content)
@@ -79,7 +78,7 @@ class controlBack extends modelBack
     public function moderate()
     {
         $reportsComments = $this->getReportsComments();
-        require('view/backend/moderate.php');
+        require('view/backend/moderateView.php');
     }
     public function deleteReportComment($id)
     {
