@@ -46,8 +46,7 @@ class controlBack extends modelBack
         if ($isPasswordCorrect) { 
         }
         else {
-            header('Location: http://s736369307.onlinehome.fr/Projet_4/index.php?action=login');
-            exit;   
+            throw new Exception(require('view/backend/loginView.php'));
         }
     }
 
