@@ -1,12 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
   <head>
 
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
 
     <title>Jean Forteroche - Billet Simple pour l'laska</title>
 
@@ -14,13 +12,13 @@
     <link href="public/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom fonts for this template -->
-    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="public/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
 
     <!-- Custom styles for this template -->
     <link href="public/css/clean-blog.min.css" rel="stylesheet">
-    <link href="public/style.css" rel="stylesheet">
+    <link href="public/css/style.css" rel="stylesheet">
 
 
   </head>
@@ -42,24 +40,23 @@
                         <li class="nav-item">
                             <a class="nav-link" href="index.php?action=listPost">Les chapitres</a>
                         </li>
-                        <li class="nav-item">
                         <?php 
                         if (empty($_SESSION))
                         { ?>
-                        <li class="nav-item"> 
-                            <a class="nav-link" href="index.php?action=login">Admin</a>
-                        </li>
-                        <?php } else { ?>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Amdin</a>
-                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuLink">
-                                <a class="dropdown-item" href="index.php?action=addPost">Ajouter un chapitre</a>
-                                <a class="dropdown-item" href="index.php?action=moderateComments">Commentaires signalés</a>
-                                <a class="dropdown-item" href="index.php?action=deconnexion">Deconnexion</a>
-                            </div>
-                        </li>
+                            <li class="nav-item"> 
+                                <a class="nav-link" href="index.php?action=login">Admin</a>
+                            </li>
+                        <?php
+                        } else { ?>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Amdin</a>
+                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuLink">
+                                    <a class="dropdown-item" href="index.php?action=addPost">Ajouter un chapitre</a>
+                                    <a class="dropdown-item" href="index.php?action=moderateComments">Commentaires signalés</a>
+                                    <a class="dropdown-item" href="index.php?action=deconnexion">Deconnexion</a>
+                                </div>
+                            </li>
                         <?php } ?>
-                        </li>
                     </ul>
                 </div>
             </div>
@@ -79,16 +76,22 @@
             </div>
         </header>
         <?= $content ?>
-    </body>
-    
+
+
     <!-- Bootstrap core JavaScript -->
     <script src="public/vendor/jquery/jquery.min.js"></script>
     <script src="public/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    
+
 
     <!-- Custom scripts for this template -->
-        <script src="public/js/clean-blog.min.js"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        <script src='http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.5/jquery-ui.min.js'></script> 
-        <script src="./public/main.js"></script>
+    <script src='https://cloud.tinymce.com/stable/tinymce.min.js?apiKey=666vwfq4hwnaafstrl3nujbahvyrz7ahiq9pzrvcdai16ckm'></script>
+    <script src="public/js/clean-blog.min.js"></script>
+    <script src="public/js/tinymce.js"></script>
+    <script src="public/js/event.js"></script>
 
+
+
+    </body>
+    
 </html>
