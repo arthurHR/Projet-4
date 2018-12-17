@@ -19,7 +19,7 @@
 	            	<p>Mais la rigueur de cette vie et les défaillances du père ne tardent pas à; transformer ce séjour en cauchemar, et la situation devient vite incontrôlable.</p>
 				    <p>Jusqu'au drame violent et imprévisible qui scellera leur destin</p>
 	            	<img class="img-fluid" src="public/img/livre.jpg" alt="">
-	            	<a class="btn btn-secondary" id="book" href="index.php?action=listPost">Lire le roman</a>
+	            	<a class="btn btn-secondary" id="book" href="index.php?action=listPost">Voir les chapitres</a>
             	</div>
         	</div>
         </div>

@@ -1,6 +1,6 @@
 <?php ob_start(); 
     $title = strip_tags($post['title']);
-    $subheading =  strip_tags("Posté par Jean Rochefort le ". $post['creation_date_fr']);
+    $subheading =  strip_tags("Posté par Jean Forteroche le ". $post['creation_date_fr']);
     $image = './public/img/alaska_2.jpg'; 
 ?>
 

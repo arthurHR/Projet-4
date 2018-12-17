@@ -20,7 +20,7 @@
                                 <?= (html_entity_decode(substr($data['content'],0 , 200)))?>
                             </h3>
                         </a>
-                        <p class="post-meta">Posté par Jean Rochefort le <em> <?= $data['creation_date_fr'] ?></em></p>
+                        <p class="post-meta">Posté par Jean Forteroche le <em> <?= $data['creation_date_fr'] ?></em></p>
                     </div>
                 <hr>
                 <?php 
