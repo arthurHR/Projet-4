@@ -1,0 +1,177 @@
+/*------------------- HomeView -------------------*/
+
+#articleHome
+{
+	background-color: #404347; 
+	color: white; 
+	padding: 5%; 
+	margin-top: 10%; 
+	text-align: center;
+}
+
+#lastChapter
+{
+	padding: 5%; 
+	text-align: center;
+}
+
+#lastChapterContent
+{
+	padding: 10%;
+}
+
+#book
+{
+	margin-top: 5%;
+}
+
+/*------------------- listPostView ----------------*/
+
+#pagination
+{
+	margin: 100px 0 50px 0;
+}
+
+/*------------------- postView ----------------*/
+
+#navigation 
+{
+	margin-bottom: 50px;
+}
+
+#navDropdown
+{
+	margin-top: -15%;
+}
+
+#updatePost
+{
+	color: white;
+}
+
+#listPost
+{
+	margin-top: -15%;
+}
+
+#paginationPost
+{
+	margin-bottom: 50px;
+}
+
+/*------------------- commentsView -------------------*/
+
+#addComment
+{
+	margin-top: 7%;
+}
+
+#commentsList
+{
+	margin-bottom: 50px;
+}
+
+#comment
+{
+	background-color: #bacfef; 
+	padding: 3%; 
+	margin : 2% 0 2% 0; 
+}
+
+#commentReply
+{
+	background-color: #aff29d; 
+	padding: 3%;  
+	margin : 2% 0 2% 3%;
+}
+
+#report
+{
+	padding: 5px; 
+	color: white;
+}
+
+#deleteComment
+{
+	padding: 5px; 
+	color:white;
+}
+
+#showAnswer
+{
+	padding: 5px;
+}
+
+.answer
+{
+	display : none;
+}
+
+.answerTextArea
+{
+	margin-top: 2%;
+}
+
+.answerInput
+{
+	padding: 5px; 
+	margin-top: -5%;
+}
+
+/*-------------------------------------------------*/
+/*---------------------- Admin --------------------*/
+/*-------------------------------------------------*/
+
+/*--------------------- LoginView ------------------*/
+
+#login
+{
+	padding : 100px; 
+	background-color: #b0b0b2;
+}
+
+/*------------------- ModerateView ----------------------*/
+
+#moderateComment
+{
+	background-color: #f2a59f; 
+	padding: 3% ; 
+	margin : 2% 0 2% 0; 
+}
+
+#moderateAnswer
+{
+	background-color: #aff29d; 
+	padding: 3%;  
+	margin : 2% 0 2% 3%;
+}
+
+#deleteReportComment
+{
+	padding : 5px; 
+	color : white;" 
+}
+
+#deleteReport
+{
+	padding: 5px; 
+	color:white;
+}
+
+#showAnswerModerate
+{
+	padding: 5px;
+}
+
+/*------------------- addPostView && updatePostView ----------------*/
+
+.post 
+{
+	margin-bottom: 3%;
+}
+
+.chapterContent 
+{
+	margin-top: 8%;
+}
+
