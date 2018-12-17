@@ -76,9 +76,11 @@ if (empty($_SESSION)) {
                         <form action="index.php?action=answerComment&amp;id=<?= $comment['id'];?>&amp;post=<?= $comment['post_id'];?>" method="post">
                             <div class="control-group">
                                 <div class="form-group floating-label-form-group controls">
-                                    <textarea rows="5" cols="50" class="answerTextArea" class="form-control" placeholder="Message" name="answer" required></textarea><br />
-                                    <input class="btn btn-primary" type="submit" class="answerInput" value="valider"/> 
+                                    <textarea rows="5" cols="50" class="answerTextArea" class="form-control" placeholder="Message" name="answer" required></textarea><br /> 
                                 </div>
+                            </div>
+                            <div class="form-group">
+                                <button class="btn btn-primary" type="submit" class="answerInput" value="valider">Valider</button>
                             </div>
                         </form>
                     </div>     

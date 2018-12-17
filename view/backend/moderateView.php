@@ -37,8 +37,14 @@
                 <button type="button" class="btn btn-success"  id="showAnswerModerate" onclick= "showAnswer('<?= $comment['id'] ?>')">Répondre au commentaire</button>
                 <div id="<?= $comment['id'] ?>" class="answer">
                     <form action="index.php?action=answerCommentModerate&amp;id=<?= $comment['id'];?>" method="post">
-                        <textarea rows="5" class="answerTextArea" class="form-control" placeholder="Message" name="answer" required data-validation-required-message="Please enter a message."></textarea><br />
-                        <input class="btn btn-primary" type="submit"  class="answerInput" value="valider"/> 
+                        <div class="control-group">
+                            <div class="form-group floating-label-form-group controls">
+                                <textarea rows="5" cols="50" class="answerTextArea" class="form-control" placeholder="Message" name="answer" required></textarea><br /> 
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <button class="btn btn-primary" type="submit" class="answerInput" value="valider">Valider</button>
+                        </div>
                     </form>
                 </div>
             <?php 
