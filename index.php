@@ -1,4 +1,5 @@
 <?php
+session_start();
 require('controller/frontend.php');
 require('controller/backend.php');
 
@@ -6,7 +7,7 @@ $user = new controlFront();
 $admin = new controlBack();
 
 if (isset($_GET['action'])) {
-    /// user ///
+    //////////////--- User ---///////////////
     switch ($_GET['action']) {
         case 'listPosts':
             if(isset($_GET['page'])){
@@ -43,7 +44,7 @@ if (isset($_GET['action'])) {
         case 'addComment':
             if (isset($_GET['id']) && $_GET['id'] > 0) {
                 
-                    $user->addComment($_GET['id'], $_POST['author'], $_POST['email'], $_POST['comment']);
+                    $user->addComment($_GET['id'], $_POST['name'], $_POST['email'], $_POST['comment']);
               }
             else {
                 echo 'Erreur : aucun identifiant de billet envoyé';
@@ -54,14 +55,14 @@ if (isset($_GET['action'])) {
                 $user->reportComment($_GET['id'] , $_GET['post']);
             } 
             else {
-            echo 'Erreur : aucun identifiant de billet envoyé';
+                echo 'Erreur : aucun identifiant de billet envoyé';
             }
             break;
 
 ////////////////---Admin---/////////////////////
 
         case 'login':
-            require('view/backend/login.php');    
+            require('view/backend/loginView.php');    
             break; 
         case 'admin':
             if (!empty($_POST['pseudo']) && !empty($_POST['password'])) {
@@ -79,7 +80,7 @@ if (isset($_GET['action'])) {
             break;
         case 'addPost':
             $admin->connected();
-            require('view/backend/addPost.php');
+            require('view/backend/addPostView.php');
             break;
         case 'createPost':
             $admin->connected();
@@ -95,16 +96,16 @@ if (isset($_GET['action'])) {
             if (isset($_GET['id'])) {
                 $admin->deletPost($_GET['id']);
             } else {
-            echo 'Erreur : aucun identifiant de billet envoyé';
+                echo 'Erreur : aucun identifiant de billet envoyé';
             }
             break;
         case 'updatePost':
             $admin->connected();
             if (isset($_GET['id'])) {
-            $admin->updatePost($_GET['id']);
+                $admin->updatePost($_GET['id']);
             } 
             else {
-            echo 'Erreur : aucun identifiant de billet envoyé';
+                echo 'Erreur : aucun identifiant de billet envoyé';
             }
             break;
         case 'saveUpdate':
@@ -125,7 +126,7 @@ if (isset($_GET['action'])) {
             if (isset($_GET['id'])) {
                 $admin->deleteReportComment($_GET['id']);
             } else {
-            echo 'Erreur : aucun identifiant de billet envoyé';
+                echo 'Erreur : aucun identifiant de billet envoyé';
             } 
             break;
         case 'cancelReport':
@@ -133,7 +134,7 @@ if (isset($_GET['action'])) {
             if (isset($_GET['id'])) {
                 $admin->cancelReport($_GET['id']);
             } else {
-            echo 'Erreur : aucun identifiant de billet envoyé';
+                echo 'Erreur : aucun identifiant de billet envoyé';
             } 
             break;
         case 'deleteComment':
@@ -141,7 +142,7 @@ if (isset($_GET['action'])) {
             if (isset($_GET['id']) && isset($_GET['post'])) {
                 $admin->deleteComments($_GET['id'], $_GET['post']);
             } else {
-            echo 'Erreur : aucun identifiant de billet envoyé';
+                echo 'Erreur : aucun identifiant de billet envoyé';
             } 
             break;
         case 'answerComment':
@@ -164,12 +165,13 @@ if (isset($_GET['action'])) {
             break;
         default:
             $user->listPosts(1);
-              break;
+            break;
         }
 }
 else {
     $user->homePage();
 }
+?>
 
     
 
