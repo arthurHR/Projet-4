@@ -1,6 +1,6 @@
 <?php
 
-require_once('model/connectMySQL.php');
+require_once('connectMySQL.php');
 
 class modelBack extends connectBD {
     
@@ -11,7 +11,7 @@ class modelBack extends connectBD {
         $this->db = $this->dbConnect();
     }
 
-    public function hashPassword()
+    protected function hashPassword()
     {
         $req = $this->db->prepare('SELECT id, pseudo, password FROM admin');
         $req->execute(array());

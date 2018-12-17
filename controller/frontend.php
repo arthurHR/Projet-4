@@ -1,6 +1,6 @@
 <?php
 
-require_once('model/frontend/modelFront.php');
+require_once('model/modelFront.php');
 
 class controlFront extends modelFront
 {

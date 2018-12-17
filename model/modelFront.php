@@ -1,6 +1,6 @@
 <?php
 
-require_once('model/connectMySQL.php');
+require_once('connectMySQL.php');
 
 class modelFront extends connectBD {
     

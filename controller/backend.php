@@ -1,6 +1,6 @@
 <?php ob_start();
-require_once('model/frontend/modelFront.php');
-require_once('model/backend/modelBack.php');
+require_once('model/modelFront.php');
+require_once('model/modelBack.php');
 
 class controlBack extends modelBack 
 {
