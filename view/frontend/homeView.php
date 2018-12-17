@@ -33,10 +33,10 @@
                 <div class="post-preview" id="lastChapterContent">
                     <a href="index.php?action=post&amp;id=<?= $post['id'] ?>">
                         <h3>
-                            <?= html_entity_decode($post['title']) ?>
+                            <?= strip_tags($post['title']) ?>
                         </h3>
                         <h4 class="post-subtitle">
-                            <?= (html_entity_decode(substr($post['content'],0 , 200))) ?>
+                            <?= (strip_tags(substr($post['content'],0 , 200))) ?>
                         </h4>
                     </a>
                     <p class="post-meta">Posté par Jean Rochefort le <em> <?= $post['creation_date_fr'] ?></em></p>
