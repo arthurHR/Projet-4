@@ -14,10 +14,10 @@
                     <div class="post-preview">
                         <a href="index.php?action=post&amp;id=<?= $data['id'] ?>">
                             <h2 class="post-title">
-                                <?= html_entity_decode($data['title']) ?>
+                                <?= strip_tags($data['title']) ?>
                             </h2>
                             <h3 class="post-subtitle">
-                                <?= (html_entity_decode(substr($data['content'],0 , 200)))?>
+                                <?= (strip_tags(substr($data['content'],0 , 200)))?>
                             </h3>
                         </a>
                         <p class="post-meta">Posté par Jean Forteroche le <em> <?= $data['creation_date_fr'] ?></em></p>
