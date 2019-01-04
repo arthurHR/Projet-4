@@ -1,4 +1,4 @@
-# Projet_4 DWJ Créez un blog pour un écrivain --------------------------------------------------------------------------------------------
+# Projet_4 DWJ Créez un blog pour un écrivain 
 
 Espace Admin
                                             
