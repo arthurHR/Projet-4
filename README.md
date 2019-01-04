@@ -1,8 +1,8 @@
 # Projet_4 DWJ
 Créez un blog pour un écrivain
 Espace admin : 
-      login -> jean
-      password -> open
+login -> jean
+password -> open
 
 
 -------------------------------------------------------Cahier des charges-------------------------------------------------------------------
